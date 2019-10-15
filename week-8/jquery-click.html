@@ -1,0 +1,57 @@
+<!--
+============================================
+; Title:  jquery-click.html
+; Author: Professor Krasso
+; Date:   25 June 2017
+; Description: Demonstrates the use of jQuery
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Click</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+
+<p>Hello World!</p>
+
+<br/>
+<table>
+    <tr>
+        <td><a href="#" class="vehicleId">1</a></td>
+        <td>Truck</td>
+    </tr>
+    <tr>
+        <td><a href="#" class="vehicleId">2</a></td>
+        <td>Car</td>
+    </tr>
+    <tr>
+        <td><a href="#" class="vehicleId">3</a></td>
+        <td>Bus</td>
+    </tr>
+</table>
+
+
+<script>
+    $(function () {
+        $("p").click(function () {
+            $(this).css("background-color", "red");
+            $(this).css("color", "white");
+        });
+
+        $(".vehicleId").click(function (event) {
+            event.preventDefault();
+            var vehicleId = $(this).text();
+            var vehicleType = $(this).closest("td").next().text();
+            alert("{vehicle_id: " + vehicleId + ", vehicle_type: " + vehicleType + "}");
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+============================================
+; Title:  client-side-javascript.html
+; Author: Professor Krasso
+; Date:   25 June 2017
+; Description: Demonstrates client-side JavaScript
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client-Side JavaScript</title>
+
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+
+<script>
+  document.write("<h1>Hello World!</h1>")
+</script>
+
+<h1 id="bar"></h1>
+<script>
+  document.getElementById('bar').innerHTML = "Hello World!";
+</script>
+
+<div id="todo"></div>
+<script>
+  document.getElementById('todo').innerHTML = "<h1>TODO LIST</h1>" +
+    "<table>" +
+    "<thead>" +
+    "<tr>" +
+    "<th>List Item(s)</th>" +
+    "</tr>" +
+    "</thead>" +
+    "<tbody>" +
+    "<tr><td>Pay Bills</td></tr>" +
+    "<tr><td>Budget Account</td></tr>" +
+    "<tr><td>Mow Lawn</td></tr>" +
+    "</tbody>" +
+    "</table>"
+</script>
+
+<h1 id="tar"></h1>
+
+<script>
+  var h1 = document.getElementById('tar');
+  h1.insertAdjacentHTML('afterbegin', 'Hello World!');
+</script>
+
+
+</body>
+</html>

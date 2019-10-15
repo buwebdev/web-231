@@ -1,0 +1,36 @@
+<!--
+============================================
+; Title:  dynamic.html
+; Author: Professor Krasso
+; Date:   25 June 2017
+; Description: Demonstrates the generation of dynamic HTML
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic HTML</title>
+
+    <link rel="stylesheet" href="../site.css">
+
+</head>
+<body>
+
+<div id="letters"></div>
+
+<script>
+    var letters = ["A", "B", "C", "D", "E"];
+
+    var out = "<h2>Letters</h2><ul>";
+    for (var x = 0; x < letters.length; x++) {
+        out += "<li>" + letters[x] + "</li>";
+    }
+    out += "</ul>";
+
+    document.getElementById('letters').innerHTML = out;
+</script>
+
+</body>
+</html>

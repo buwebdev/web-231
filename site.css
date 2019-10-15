@@ -1,0 +1,27 @@
+/*
+============================================
+; Title:  site.css
+; Author: Professor Krasso
+; Date:   25 June 2017
+; Description: Global styling for week's 7 through 9
+;===========================================
+*/
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+
+th {
+  background-color: steelblue;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightsteelblue;
+}
