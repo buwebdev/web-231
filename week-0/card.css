@@ -1,0 +1,15 @@
+/**
+    Title: card.css
+    Author: Professor Krasso
+    Date: 12/9/2020
+    Description: Styling for the card.html file
+ */
+
+#container {
+    padding: 10px;
+}
+
+#card-example {
+    width: 600px;
+    margin: 3% auto 0;
+}

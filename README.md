@@ -23,8 +23,7 @@ Most exercises and assignments have runnable sample code so you can visually see
 Approach every week from top-to-bottom and do not move to the next assignment/exercise without fully understanding the previous.
 
 ```bash
-git clone https://github.com/rrkrasso/web-231-code-snippets.git
-cd web-231-code-snippets
+git clone https://github.com/buwebdev/web-231.git
+cd cd web-231
 ```
-
 

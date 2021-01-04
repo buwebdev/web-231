@@ -1,0 +1,20 @@
+/**
+    Title: form.css
+    Author: Professor Krasso
+    Date: 12/9/2020
+    Description: Styling for the form.html file
+ */
+
+#container {
+    padding: 10px;
+}
+
+#form-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
