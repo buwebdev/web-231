@@ -1,0 +1,71 @@
+/*
+============================================
+; Title:  gradebook.css
+; Author: Professor Krasso
+; Date:   4 April 2023
+; Description: Styling for the gradebook app
+;===========================================
+*/
+
+/**
+  Base styling for the web page.  Centers the divs and sets the
+  width to a reasonable value.
+*/
+#container {
+  width: 600px;
+  margin: 3% auto 0;
+}
+
+/*
+  Adds a 1 pixel border around the results div.
+*/
+#results {
+  border: 1px solid #ccc;
+  min-height: 200px
+}
+
+h3 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 400;
+}
+
+#letter-results {
+  text-align: center;
+  font-size: 28px;
+}
+
+/**
+  Styling for the letter results innerHTML binding.
+*/
+.green {
+  background-color: #e4f8f0;
+  color: #1ea97c;
+  border-left: solid 4px #1ea97c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: #e9e9ff;
+  color: #696cff;
+  border-left: solid 4px #696cff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.yellow {
+  background-color: #fff2e2;
+  color: #cc8925;
+  border-left: solid 4px #cc8925;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.red {
+  background-color: #ffe7e6;
+  color: #ff5757;
+  border-left: solid 4px #ff5757;
+  padding: 10px;
+  border-radius: 5px;
+}
