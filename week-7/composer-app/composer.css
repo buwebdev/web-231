@@ -1,0 +1,63 @@
+/*
+============================================
+; Title:  composer.css
+; Author: Professor Krasso
+; Date:   19 April 2023
+; Description: Styling for the Composer App
+;===========================================
+*/
+
+/**
+  Base styling for the web page.  Centers the divs and sets the
+  width to a reasonable value.
+*/
+#container {
+  width: 600px;
+  margin: 3% auto 0;
+}
+
+/*
+  Adds a 1 pixel border around the results div.
+*/
+#results {
+  border: 1px solid #ccc;
+  min-height: 200px
+}
+
+/**
+  Add styling to the h3 element
+*/
+h3 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 400;
+}
+
+/*
+  Center the text and give it a size of 28px
+*/
+#composer-results {
+  text-align: center;
+  font-size: 28px;
+}
+
+/*
+  Styles the btnDisplay
+*/
+.btn {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 10px 10px;
+  background-color: #4F3674;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #432e63;
+  color: #fff;
+  cursor: pointer;
+}
