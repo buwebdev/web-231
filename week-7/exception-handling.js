@@ -15,7 +15,7 @@ try
   const sum = y / x
 
   // if statement
-  if (sum === Infinity) throw 'DivideByZeroException'
+  if (sum === Infinity) throw Error('Divide by zero')
 
   // output
   console.log(sum)
