@@ -1,0 +1,67 @@
+<!--
+    Title: composer.html
+    Author: Professor Krasso
+    Date: 11 May 2023
+    Description: HTML page for the Composer App
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composer App: Home</title>
+
+  <!-- Stylesheet and font references -->
+  <link rel="stylesheet" href="composer.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="container">
+    <div id="form">
+      <h1>Welcome to the Composer App!</h1>
+
+      <fieldset>
+        <legend>Select an option</legend>
+        <div>
+          <input type="radio" id="mozart" value="Wolfgang Amadeus Mozart" name="composer">
+          <label for="mozart">Wolfgang Amadeus Mozart</label>
+        </div>
+
+        <div>
+          <input type="radio" id="beethoven" value="Ludwig van Beethoven" name="composer">
+          <label for="beethoven">Ludwig van Beethoven</label>
+        </div>
+
+        <div>
+          <input type="radio" id="brahms" value="Johannes Brahms" name="composer">
+          <label for="brahms">Johannes Brahms</label>
+        </div>
+
+        <div>
+          <input type="radio" id="wagner" value="Richard Wagner" name="composer">
+          <label for="wagner">Richard Wagner</label>
+        </div>
+
+        <div>
+          <input type="radio" id="debussy" value="Claude Debussy" name="composer">
+          <label for="debussy">Claude Debussy</label>
+        </div>
+      </fieldset>
+
+      <button class="btn w-100" onclick="submit()" id="btnSubmit">Submit</button>
+
+      <br />
+      <br />
+      <div id="results">
+        <div id="composer-results"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="composer.js"></script>
+</body>
+</html>
