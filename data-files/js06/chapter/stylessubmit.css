@@ -1,0 +1,186 @@
+/*  JavaScript 7th Edition
+    Chapter 6
+    Chapter Case
+
+    Filename: stylesubmit.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 1000px;
+   background: white;
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+
+/* Styles for this Project */
+
+html {
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;  
+
+   background: white;
+   max-width: 1020px;
+   min-width: 420px;
+   margin: 0px auto;
+}
+
+p {
+   font-size: 1.2em;
+   line-height: 1.4em;
+   margin: 15px;
+}
+
+
+/* Header Styles */
+
+body > header {
+   width: 100%;
+}
+
+body > header > img {
+   display: block;
+   width: 100%;
+}
+
+
+   
+/* Order Table Styles */
+
+table#orderTable {
+   margin: 30px 0px 0px 45px;
+   width: 65%;
+   border-collapse: collapse;
+   color: rgb(151, 151, 151);
+   font-size: 16px;
+}
+
+table#orderTable input {
+   font-size: 16px;
+}
+
+form#order input {
+   background-color: transparent;
+   border: none;
+   color: rgb(151, 151, 151);
+}
+
+table#orderTable caption {
+   font-size: 2em;
+   text-align: left;
+   color: rgb(151, 151, 151);
+   font-weight: normal;
+   margin-bottom: 20px;
+}
+
+
+table#orderTable td {
+   height: 20px;
+   vertical-align: top;
+   min-width: 90px;
+}
+
+form#order input#qty {
+   width: 3em;
+}
+
+form#order input#modelName, form#order input#planName {
+   width: 25em;
+}
+
+form#order input {
+   color: rgb(151, 151, 151);
+}
+
+
+table#orderTable tr td:last-of-type input {
+   text-align: right;
+   border: none;
+}
+
+table#orderTable tr:nth-of-type(1) {
+   border-top: 1px solid rgb(151, 151, 151);
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(1) td {
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(2) td {
+   padding-bottom: 15px;
+}
+
+table#orderTable tr:nth-of-type(2) {
+   border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+table#orderTable tr:nth-of-type(3) td {
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(4) td {
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(4) td {
+   border-bottom: 4px double rgb(151, 151, 151);
+}
+
+table#orderTable tr:last-of-type td {
+   padding-top: 15px;
+}
+
+table#orderTable td.rightA {
+   text-align: right;
+   padding-right: 10px;
+}
+

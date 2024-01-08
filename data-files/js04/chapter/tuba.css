@@ -1,0 +1,225 @@
+/*  JavaScript 6th Edition
+    Chapter 4
+    Chapter case
+
+    Tuba Farm Equipment
+    Large format style sheet
+
+    Filename: tuba.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 960px;
+   margin: 0 auto;
+   font-family: "Muli", arial, helvetica, sans-serif;
+   background: rgb(117,192,62);
+   position: relative;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* container */
+body div:first-child {
+   background: rgb(14,119,62);
+}
+
+/* page header */
+header {
+   text-transform: uppercase;
+   background: rgb(14,119,62);
+   color: rgb(227,198,32);
+   font-size: 3.7em;
+   letter-spacing: -3px;
+}
+
+header img {
+   display: block;
+}
+
+header h1 {
+   float: right;
+   width: 702px;
+   text-align: center;
+   margin-top: 0.3em;
+}
+
+/* navigation */
+nav {
+   text-transform: uppercase;
+   width: 702px;
+   position: absolute;
+   left: 258px;
+   top: 5.8em;
+}
+
+nav ul {
+   text-align: center;
+   padding: 0 10px;
+}
+
+nav ul li {
+   display: inline-block;
+   padding: 7px 8px;
+   margin: 0 3px;
+   background: rgb(116,191,68);
+   border: 5px solid rgb(116,191,68);
+   border-radius: 10px;
+}
+
+nav ul li:last-child {
+   background: #6996D3;
+   border: 5px solid #6996D3;
+}
+
+nav ul li:hover {
+   background: rgb(227,198,32);
+}
+
+/* main content */
+article {
+   width: 702px;
+   float: right;
+   padding: 1em;
+   background: white;
+}
+
+article h2 {
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: left;
+   margin: 0 0 10px 51px;
+}
+
+form {
+   width: 600px;
+   margin: 0 auto;
+}
+
+fieldset {
+   margin: 10px;
+   padding: 20px 10px 10px;
+   background: rgb(164,188,149);
+   position: relative;
+   border-radius: 10px;
+}
+
+legend span {
+   display: block;
+   position: relative;
+   top: 1em;
+   font-weight: bold;
+}
+
+label {
+   margin-right: 5px;
+}
+
+/* acres text box */
+#acres {
+   width: 7em;
+}
+
+/* months text box */
+#months {
+   width: 3em;
+}
+
+/* sidebar */
+aside {
+   width: 258px;
+   padding: 1em;
+   color: rgb(227,198,32);
+   height: 100%;
+}
+
+aside h2 {
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: center;
+}
+
+aside p {
+   padding: 1em;
+}
+
+/* footer */
+footer {
+   width: 100%;
+   font-size: 14px;
+   padding: 10px;
+   clear: both;
+   background: black;
+   color: rgb(227,198,32);
+}
+
+footer p {
+   text-align: center;
+}

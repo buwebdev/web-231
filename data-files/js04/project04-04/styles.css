@@ -1,0 +1,145 @@
+/*  JavaScript 7th Edition
+    Chapter 4
+    Hands-on Project 4-4
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 960px;
+   background: white;
+   margin: 0 auto;
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #5472B2;
+   width: 100%;
+   color: #FFFFFF;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+}
+
+/* main content */
+article {
+   position: relative;
+   width: 960px;
+   height: 300px;
+   text-align: left;
+   background: #FFDB70;
+   position: relative;
+}
+
+article > h2 {
+   font-weight: normal;
+   font-size: 2em;
+   padding: 20px 0 10px 0;
+   text-align: center;
+   margin: 0 0 20px 0;
+}
+
+div#warning {
+   position: absolute;
+   top: 180px;
+   left: 70px;
+   color: red;
+}
+
+label {
+   float: left;
+   display: block;
+   clear: left;
+   width: 110px;
+   margin-bottom: 10px;
+   margin-left: 70px;
+}
+
+input {
+   display: block;
+   float: left;
+   margin-left: 20px;
+   margin-bottom: 10px;
+   text-align: right;
+   width: 100px;
+}
+
+input#change {
+   padding-right: 15px;
+}
+
+aside#bills {
+   position: absolute;
+   top: 50px;
+   left: 480px;
+}
+
+aside#coins {
+   position: absolute;
+   top: 50px;
+   left: 680px;
+}
+
+aside h2 {
+   font-size: 1.2em;
+   margin: 0;
+   text-align: center;
+   margin: 20px 0 10px;
+}
+
+aside div:nth-of-type(odd) {
+   float: left;
+   width: 100px;
+   clear: left;
+}
+
+aside div:nth-of-type(even) {
+   float: left;
+   width: 30px;
+   height: 30px;
+   outline: 1px solid gray;
+   text-align: center;
+   line-height: 30px;
+   background-color: ivory;
+}

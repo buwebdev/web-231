@@ -1,0 +1,340 @@
+/*  JavaScript 7th Edition
+    Chapter 6
+    Chapter Case
+
+    Filename: stylesb.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 1000px;
+   background: white;
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+
+/* Styles for this Project */
+
+html {
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;  
+
+   background: white;
+   max-width: 1020px;
+   min-width: 420px;
+   margin: 0px auto;
+}
+
+p {
+   font-size: 1.2em;
+   line-height: 1.4em;
+   margin: 15px;
+}
+
+
+/* Header Styles */
+
+body > header {
+   width: 100%;
+}
+
+body > header > img {
+   display: block;
+   width: 100%;
+}
+
+
+/* Section Styles */
+
+section#summary {
+   -webkit-flex: 1 1 50px;
+   flex: 1 1 50px;
+   padding: 20px 0px 10px 20px;
+}
+
+section#summary h1 {
+   font-size: 1.8em;
+   letter-spacing: 0.1em;
+   line-height: 1.2em;
+   font-weight: normal;
+   margin-bottom: 10px;
+}
+
+section#summary h2 {
+   font-size: 1.25em;
+   font-weight: normal;
+}
+
+section#summary h3 {
+   font-size: 1em;
+   font-weight: normal; 
+   margin-bottom: 20px;  
+}
+
+section#summary > img {
+   display: block;
+   width: 50%;
+   margin: 0px auto;
+}
+
+section#summary p {
+   font-size: 1.2em;
+   text-align: justify;
+}
+
+section#orderSection {
+   -webkit-flex: 1 1 250px;
+   flex: 1 1 250px;
+   margin: 20px;
+}
+   
+/* Order Table Styles */
+
+table#orderTable {
+   margin: 30px 0px 0px 45px;
+   width: 90%;
+   border-collapse: collapse;
+   color: rgb(151, 151, 151);
+   font-size: 12px;
+}
+
+
+table#orderTable caption {
+   font-size: 2em;
+   text-align: left;
+   color: rgb(151, 151, 151);
+   font-weight: normal;
+   margin-bottom: 20px;
+}
+
+
+table#orderTable td {
+   height: 20px;
+   vertical-align: top;
+}
+
+
+table#orderTable tr td:last-of-type input {
+   text-align: right;
+   border: none;
+}
+
+table#orderTable tr:nth-of-type(1) {
+   border-top: 1px solid rgb(151, 151, 151);
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(1) td {
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
+table#orderTable tr:nth-of-type(2) td {
+   padding-bottom: 15px;
+}
+
+table#orderTable tr:nth-of-type(2) {
+   border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+table#orderTable tr:nth-of-type(3) td {
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(4) td {
+   padding-top: 15px;
+}
+
+table#orderTable tr:nth-of-type(4) td {
+   border-bottom: 4px double rgb(151, 151, 151);
+   padding-bottom: 15px;
+}
+
+table#orderTable tr:last-of-type td {
+   padding-top: 15px;
+}
+
+table#orderTable td.rightA {
+   text-align: right;
+   padding-right: 10px;
+}
+
+
+
+/* Payment Form Styles */
+
+section#paySection {
+   -webkit-flex: 1 1 550px;
+   flex: 1 1 550px;
+   border-left: 4px double rgb(101, 101, 101);   
+   min-height: 300px;
+   font-size: 14px;
+}
+
+section#paySection p#footnote {
+   font-size: 1em;
+   text-align: left;
+   margin: 0px 10px 20px 140px;
+}
+
+section#paySection h1 {
+   text-align: center;
+   font-size: 2em;
+   letter-spacing: 0.15em;
+   margin: 20px 0px;
+   font-weight: normal;
+   color: rgb(57, 44, 28);
+}
+
+form#payment fieldset {
+   border: none;
+}
+
+
+
+form#payment legend {
+   font-size: 1.3em;
+   padding: 8px;
+   width: 80%;
+   text-align: left;
+   margin-left: 50px;
+   margin-bottom: 20px;
+   color: rgb(57, 44, 28);
+}
+
+
+/* Input and Label Styles */
+
+form#payment label {
+   display: block;
+   float: left;
+   clear: left;
+   font-size: 1em;
+   margin-bottom: 25px;
+   margin-right: 10px;
+   width: 140px;
+   text-align: right;
+   color: rgb(57, 44, 28);
+}
+
+
+form#payment input, form#payment select {
+   display: block;
+   float: left;
+   box-shadow: 0px 0px 15px white;
+}
+
+/* Radio Button Styles */
+
+form#payment label.cardLabel {
+   display: inline-block;
+   float: none;
+   width: auto;
+   text-align: left;
+   margin-top: -10px;
+}
+
+form#payment fieldset#cards {
+   display: block;
+   float: left; 
+}
+
+form#payment fieldset#cards > span {
+   display: inline-block;
+   margin-left: 8px;
+   width: 50px;
+}
+
+
+
+form#payment input[type='radio'] {
+   display: inline-block;
+   width: auto;
+   float: none;
+   clear: none;
+}
+
+
+
+span#separator {
+   width: 30px;
+   text-align: center;
+   display: block;
+   float: left;
+}
+
+form#payment input#cvc {
+   width: 3em;
+}
+
+form#payment input#subButton {
+   display: block;
+   width: 180px;
+   height: 35px;
+   margin: 15px 0px 10px 200px;
+   background-color: rgba(232, 218, 201, 0.8);
+   font-size: 1.3em;
+   border-radius: 20px;
+   float: none;
+}
+
+/* Valid and Invalid Styles */
+
+input:invalid, input:focus:invalid, select:invalid, select:focus:invalid {
+   outline: none;
+   background-color: rgba(221,147,148,0.2);
+ }
+
+input:valid, input:focus:valid, select:valid, select:focus:valid {
+   outline: none;
+   background-color: none;
+}
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Hands-on Project 6-3
+
+      Author: 
+      Date:   
+
+      Filename: formsubmit.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 6-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script>
+      window.addEventListener("load", function(){   
+         // Retrieve the field/value pairs from the URL
+         var formData = location.search.slice(1);
+         formData = formData.replace(/\+/g," ");
+         formData = decodeURIComponent(formData);
+         let formFields = formData.split(/[&=]/g);
+
+         // Write the field values to the account table
+         document.getElementById("firstnameShip").textContent = formFields[1]; 
+         document.getElementById("lastnameShip").textContent = formFields[3]; 
+         document.getElementById("address1Ship").textContent = formFields[5]; 
+         document.getElementById("address2Ship").textContent = formFields[7];
+         document.getElementById("cityShip").textContent = formFields[9];  
+         document.getElementById("stateShip").textContent = formFields[11];   
+         document.getElementById("countryShip").textContent = formFields[13];   
+         document.getElementById("codeShip").textContent = formFields[15];      
+         document.getElementById("firstnameBill").textContent = formFields[19]; 
+         document.getElementById("lastnameBill").textContent = formFields[21]; 
+         document.getElementById("address1Bill").textContent = formFields[23]; 
+         document.getElementById("address2Bill").textContent = formFields[25];
+         document.getElementById("cityBill").textContent = formFields[27];  
+         document.getElementById("stateBill").textContent = formFields[29];   
+         document.getElementById("countryBill").textContent = formFields[31];   
+         document.getElementById("codeBill").textContent = formFields[33];          
+      } );   
+   </script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 6-3
+      </h1>
+   </header>
+
+   <section>
+      <h1>Shipping and Billing</h1>
+      <table id="shipping">
+         <caption>Shipping</caption>
+         <tr>
+            <td>First Name</td>
+            <td><span id="firstnameShip"></span></td>
+         </tr>
+         <tr>
+            <td>Last Name</td>
+            <td><span id="lastnameShip"></span></td>
+         </tr> 
+         <tr>
+            <td>Address 1</td>
+            <td><span id="address1Ship"></span></td>
+         </tr>
+         <tr>
+            <td>Address 2</td>
+            <td><span id="address2Ship"></span></td>
+         </tr> 
+         <tr>
+            <td>City</td>
+            <td><span id="cityShip"></span></td>
+         </tr> 
+         <tr>
+            <td>State</td>
+            <td><span id="stateShip"></span></td>
+         </tr>  
+         <tr>
+            <td>Country</td>
+            <td><span id="countryShip"></span></td>
+         </tr>   
+         <tr>
+            <td>Postal Code</td>
+            <td><span id="codeShip"></span></td>
+         </tr>          
+      </table>
+      
+      <table id="billing">
+         <caption>Billing</caption>
+         <tr>
+            <td>First Name</td>
+            <td><span id="firstnameBill"></span></td>
+         </tr>
+         <tr>
+            <td>Last Name</td>
+            <td><span id="lastnameBill"></span></td>
+         </tr> 
+         <tr>
+            <td>Address 1</td>
+            <td><span id="address1Bill"></span></td>
+         </tr>
+         <tr>
+            <td>Address 2</td>
+            <td><span id="address2Bill"></span></td>
+         </tr> 
+         <tr>
+            <td>City</td>
+            <td><span id="cityBill"></span></td>
+         </tr> 
+         <tr>
+            <td>State</td>
+            <td><span id="stateBill"></span></td>
+         </tr>  
+         <tr>
+            <td>Country</td>
+            <td><span id="countryBill"></span></td>
+         </tr>   
+         <tr>
+            <td>Postal Code</td>
+            <td><span id="codeBill"></span></td>
+         </tr>          
+      </table>      
+   </section>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Chapter Case
+
+      Author: 
+      Date:   
+
+      Filename: js06b.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Chapter 6 Case Problem: Payment Form</title>
+   <link rel="stylesheet" href="stylesb.css" />
+</head>
+
+<body>
+   <header>
+      <img src="logo.png" alt="Coctura" />
+   </header>
+
+   <section id="orderSection">       
+     <table id="orderTable">
+        <caption>Your Order</caption>
+        <tr>
+           <td>8-Quart ($159.95)</td>
+           <td>Qty: 6</td>                 
+           <td class="rightA">$959.70</td>
+        </tr>
+        <tr>
+           <td colspan="2">1-year protection plan ($11.95)</td>
+           <td class="rightA">$71.70</td>
+        </tr>        
+        <tr>
+           <td colspan="2" class="rightA">Subtotal</td>
+           <td class="rightA">$1,031.40</td>
+        </tr>
+
+        <tr>
+           <td colspan="2" class="rightA">Tax (5%)</td>
+           <td class="rightA">$51.57</td>
+        </tr>
+
+        <tr>
+           <td colspan="2" class="rightA">TOTAL</td>
+           <td class="rightA">$1,082.97</td>
+        </tr>
+     </table>     
+</section>
+   
+   <section id="paySection">
+      <h1>Payment Form</h1>
+      
+
+      <form id="payment" name="payment" method="post" action="paysubmit.html">         
+         <fieldset id="creditcard">
+            <legend>Credit Information</legend>
+
+            <label for="cardName">Name*</label>
+            <input name="cardName" id="cardName" required type="text" />              
+
+            <label>Credit Card*</label>
+            <fieldset id="cards">
+               <label class="cardLabel">
+                  <input name="credit" value="amex" type="radio" required />               
+                  <span>American Express</span>
+               </label>
+               <label class="cardLabel">               
+                  <input name="credit" value="discover" type="radio" />
+                  <span>Discover</span>
+               </label>
+               <label class="cardLabel">                              
+                  <input name="credit" value="master" type="radio"  />
+                  <span>MasterCard</span>
+               </label>
+               <label class="cardLabel">                                    
+                  <input name="credit" value="visa" type="radio"  />
+                  <span>Visa</span>
+               </label>
+            </fieldset>          
+
+            <label for="cardNumber">Credit Card Number*</label>
+            <input name="cardNumber" id="cardNumber" required type="text"
+                   pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+
+            <label for="expMonth">Expiration Date*</label>
+            <select id="expMonth" name="expMonth">
+               <option value="mm">mm</option>
+               <option value="01">01</option>
+               <option value="02">02</option>
+               <option value="03">03</option>
+               <option value="04">04</option>
+               <option value="05">05</option>
+               <option value="06">06</option>
+               <option value="07">07</option>
+               <option value="08">08</option>
+               <option value="09">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+            <span id="separator"> / </span>
+            <select id="expYear" name="expYear">
+               <option value="yy">yy</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+            </select>            
+
+            <label for="cvc">CVC*</label>
+            <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+         </fieldset>
+
+         <p id="footnote">* - Required Item</p>        
+         <input type="submit" id="subButton" value="Submit Payment" />         
+      </form>
+
+   </section>
+</body>
+</html>

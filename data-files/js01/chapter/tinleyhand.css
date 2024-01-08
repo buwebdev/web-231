@@ -1,0 +1,220 @@
+/*  JavaScript 6th Edition
+    Chapter 1
+    Chapter case
+
+    Tinley Xeriscapes
+    Handheld style sheet
+    Author: 
+    Date:   
+
+    Filename: tinleyhand.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   max-width: 960px;
+   background: white;
+   margin: 0 auto;
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: underline;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* container */
+#container {
+   background: rgb(50,34,99);
+   max-width: 100%;
+   overflow: hidden;
+   position: relative;
+}
+
+/* page header */
+header {
+   background: rgb(50,34,99);
+   max-width: 100%;
+   overflow: hidden;
+   font-family: 'Lily Script One', cursive;
+   color: rgb(13,177,75);
+   font-size: 36px;
+   text-align: center;
+   vertical-align: middle;
+   padding-top: 10px;
+}
+
+header h1 {
+   max-width: 80%;
+   margin: 0 auto;
+}
+
+header #logo1, header #logo2 {
+   display: none;   
+}
+
+header #logo3 {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 66px;
+   height: 60px;
+}
+
+/* navigation */
+nav {
+   background: rgb(50,34,99);
+   overflow: hidden;
+   font-size: 14px;
+}
+
+nav ul {
+   text-align: center;
+   border-bottom: 1px solid rgb(164,191,150);
+}
+
+nav ul li {
+   display: inline-block;
+   padding: 5px 15px;
+   background: rgb(164,191,150);
+   margin-top: 3px;
+   -moz-border-radius-topleft: 7px;
+   -moz-border-radius-topright: 7px;
+   -webkit-border-top-left-radius: 7px;
+   -webkit-border-top-right-radius: 7px;
+   border-top-left-radius: 7px;
+   border-top-right-radius: 7px;
+}
+
+nav ul #currentpage {
+   background: rgb(13,177,75);
+}
+
+/* sidebar */
+aside {
+   background: rgb(50,34,99);
+   max-width: 100%;
+   overflow: hidden;
+}
+
+aside ul {
+   padding: 5px;
+   text-align: center;
+}
+
+aside ul li {
+   padding: 6px;
+   font-size: 12px;
+   display: inline-block;
+   background: rgb(13,177,75);
+   border: 1px solid rgb(13,177,75);
+}
+
+aside ul li:hover {
+   color: rgb(164,191,150);
+   background: rgb(50,34,99);
+}
+
+/* main content */
+article {
+   text-align: center;
+   max-width: 100%;
+   overflow: hidden;
+}
+
+
+/* remove blank space for descenders below image */
+article figure img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+   width: auto;
+   margin: 0 auto;
+}
+
+article figure figcaption p {
+   font-size: 16px;
+   color: rgb(164,191,150);
+   padding: 10px 0;
+}
+
+article figure figcaption p a:link {
+   color: rgb(13,177,75);
+}
+
+/* footer */
+footer {
+   background: rgb(164,191,150);
+   max-width: 100%;
+   overflow: hidden;
+   font-size: 12px;
+   padding: 10px;
+}
+
+footer p {
+   text-align: center;
+}

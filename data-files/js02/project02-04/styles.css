@@ -1,0 +1,145 @@
+/*  JavaScript 7th Edition
+    Chapter 2
+    Hands-on Project 2-4
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 960px;
+   background: white;
+   margin: 30px auto;
+   font-family: Verdana, Geneva, sans-serif;
+   position: relative;   
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #330570;
+   width: 100%;
+   color: #FFFFFF;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+}
+
+/* main content */
+article {
+   width: 960px;
+   height: 250px;
+   text-align: left;
+   background: #FFCF40;
+}
+
+article h2 {
+   font-weight: bold;
+   font-size: 24px;
+   padding: 10px;
+}
+
+/* form */
+form {
+   margin: 0 auto;
+}
+
+input {
+   float: left;
+   clear: left;
+   margin: 10px;
+}
+
+label {
+   float: left;
+   font-size: 1.4em;
+}
+
+aside {
+   position: absolute;
+   top: 120px;
+   left: 400px;
+   outline: 1px solid red;
+}
+
+aside span {
+   position: absolute;
+   font-size: 1.4em;
+}
+
+aside span#totalLab {
+   top: 0px;
+   left: 0px;
+   width: 220px;   
+}
+
+aside span#foodTotal {
+   top: 0px;
+   left: 280px;
+   width: 100px;
+   text-align: right;
+}   
+
+aside span#taxLab {
+   top: 40px;
+   left: 0px;
+   width: 220px;   
+}
+
+aside span#foodTax {
+   top: 40px;
+   left: 280px;
+   width: 100px;
+   text-align: right;
+}
+
+aside span#billLab {
+   top: 80px;
+   left: 0px;
+   width: 220px;   
+}
+
+aside span#totalBill {
+   top: 80px;
+   left: 280px;
+   width: 100px;
+   text-align: right;
+}

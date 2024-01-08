@@ -1,0 +1,184 @@
+/*  JavaScript 7th Edition
+    Chapter 5
+    Hands-on Project 5-1
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 960px;
+   background: white;
+   margin: 0 auto;
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #5472B2;
+   width: 100%;
+   color: #FFFFFF;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+}
+
+/* main content */
+article {
+   width: 960px;
+   height: 560px;
+   text-align: left;
+   background: #FFDB70;
+   position: relative;
+}
+
+
+
+/*-------------------- Project Styles ------------------*/
+
+article h2 {
+   font-weight: bold;
+   font-size: 24px;
+   padding: 20px 0;
+   text-align: center;
+}
+
+
+div#container {
+   --main-height: 440px;
+   height: var(--main-height);
+   position: relative;
+}
+
+
+div#instructions {
+   width: 300px;
+   height: var(--main-height);
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+div#instructions p {
+   line-height: 2;
+   padding: 15px;
+   font-size: 1.2em;
+}
+
+div#instructions input#startquiz {
+   display: block;
+   margin: 10px auto;
+   font-size: 1.8em;
+   width: 180px;
+   text-align: center;
+   border-radius: 20px;
+   background-color: #1BA8BF;
+   color: ivory;
+   cursor: pointer;
+   user-select: none;
+}
+
+div#instructions input#quizclock {
+   display: block;
+   margin: 30px auto;
+   width: 100px;
+   height: 100px;
+   text-align: center;
+   font-size: 60px;
+   color: white;
+   background-color: rgb(40, 40, 40);
+   user-select: none;
+}
+
+div#quiz {
+   width: 660px;
+   height: var(--main-height);
+   position: absolute;
+   top: 0;
+   left: 300px;
+}
+
+div#quiz table {
+   width: 500px;
+   margin: 0 auto;
+}
+
+div#quiz table td {
+   line-height: 2.5;
+   font-size: 1.2em;
+}
+
+div#quiz em {
+   font-style: italic;
+   font-family: "Times New Roman", serif;
+   font-size: 1.4em;
+}
+
+div#quiz input {
+   font-size: 1.2em;
+   width: 90px;
+   text-align: center;
+}
+
+div#quiz input.wronganswer {
+   color: white;
+   background-color: red;
+}
+
+div#overlay {
+   width: 660px;
+   height: var(--main-height);
+   position: absolute;
+   top: 0;
+   left: 300px;
+   z-index: 1
+}
+
+div#overlay.hidequiz {
+   display: block;
+   background-color: #FFDB70;
+}
+
+div#overlay.showquiz {
+   display: none;
+   background-color: transparent;
+}

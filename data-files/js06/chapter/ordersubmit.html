@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Chapter Case
+
+      Author: 
+      Date:   
+
+      Filename: ordersubmit.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Chapter 6 Case Problem: Product Order</title>
+   <link rel="stylesheet" href="stylessubmit.css" />
+   <script>
+      window.addEventListener("load", function(){   
+         // Retrieve the field/value pairs from the URL
+         var formData = location.search.slice(1);
+         formData = formData.replace(/\+/g," ");
+         formData = decodeURIComponent(formData);
+         let formFields = formData.split(/[&=]/g);
+
+         // Write the field values to the order form
+         document.forms.order.elements.modelName.value = formFields[3];
+         document.forms.order.elements.qty.value = formFields[5]; 
+         document.forms.order.elements.modelCost.value = formFields[7];
+         document.forms.order.elements.planName.value = formFields[11];   
+         document.forms.order.elements.planCost.value = formFields[13];
+         document.forms.order.elements.subtotal.value = formFields[15];
+         document.forms.order.elements.salesTax.value = formFields[17];
+         document.forms.order.elements.totalCost.value = formFields[19];    
+      } );   
+   </script>
+</head>
+
+<body>
+   <header>
+      <img src="logo.png" alt="Coctura" />
+   </header>
+   <section id="orderSection">
+      <form id="order" name="order">       
+        <table id="orderTable">
+           <caption>Your Order</caption>
+           <tr>
+              <td>
+                 <input type="text" name="modelName" id="modelName" readonly  />                                                
+              </td>
+              <td>
+                 <label>Qty: </label>
+                 <input type="text" name="qty" id="qty"  readonly />  
+              </td>                 
+              <td>
+                 <input type="text" name="modelCost" id="modelCost" size="10"  readonly />
+              </td>
+           </tr>
+           <tr>
+              <td colspan="2">
+                 <input type="text" name="planName" id="planName"  readonly />
+              </td>
+              <td>
+                 <input type="text" name="planCost" id="planCost" size="10" readonly  />
+              </td>
+           </tr>        
+           <tr>
+              <td colspan="2" class="rightA">Subtotal</td>
+              <td class="outcell">
+                 <input type="text" name="subtotal" id="subtotal" size="10" readonly  />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">Tax (5%)</td>
+              <td>
+                 <input type="text" name="salesTax" id="salesTax" size="10" readonly  />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">TOTAL</td>
+              <td>
+                 <input type="text" name="totalCost" id="totalCost" size="10" readonly  />
+              </td>
+           </tr>
+        </table>
+      </form>      
+   </section>
+</body>
+</html>

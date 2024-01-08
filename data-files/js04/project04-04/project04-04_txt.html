@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 4
+      Hands-on Project 4-4
+
+      Author: 
+      Date:   
+
+      Filename: project04-04.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 4-4</title>
+   <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 4-4
+      </h1>
+   </header>
+
+   <article>
+      <h2>Change Calculator</h2>
+      
+      <label for="cash">Cash Amount</label>
+      <input id="cash" type="number" min="0" max="100" step="0.01" value="20.00" />
+
+      <label for="bill">Bill</label>
+      <input id="bill" type="number" min="0" max="100" step="0.01" value="0.00" />
+      
+      <label for="change">Change</label>
+      <input id="change" value="20.00" readonly />
+      
+      <div id="warning"></div>
+      
+      <aside id="bills">
+         <h2>Bills</h2>
+         <div>$20 Bills</div><div id="bill20">1</div>
+         <div>$10 Bills</div><div id="bill10">0</div>    
+         <div>$5 Bills</div><div id="bill5">0</div>  
+         <div>$1 Bills </div><div id="bill1">0</div>          
+      </aside>
+      <aside id="coins">
+         <h2>Coins</h2>
+         <div>Quarters</div><div id="coin25">0</div>
+         <div>Dimes</div><div id="coin10">0</div>          
+         <div>Nickels</div><div id="coin5">0</div> 
+         <div>Pennies</div><div id="coin1">0</div>          
+      </aside>      
+   </article>
+   
+</body>
+</html>

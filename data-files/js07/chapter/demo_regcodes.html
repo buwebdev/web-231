@@ -1,0 +1,83 @@
+<html>
+<head>
+<!-- 
+   JavaScript 7th Edition
+   Chapter 7
+
+
+   Filename: demo_regcodes.html
+-->
+<title>Regular Expression Demo</title>
+<style>
+   body {margin:0px}
+   table {width: 330px; font-family: Arial, Helvetica, sans-serif; color: black;
+          font-size: 9pt}
+   th {text-align: left; color: white; background-color: blue}
+   .code {background-color: ivory; text-align: center; font-family: Courier New, monospace;
+          color: black}
+</style>
+</head>
+
+<body>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th colspan="2">Flags</th></tr>
+<tr><td class="code">i</td><td class="des">make the pattern case insensitive</td></tr>
+<tr><td class="code">g</td><td class="des">search for every occurrence of the matching pattern</td></tr>
+
+<tr><th colspan="2">Position Characters</th></tr>
+<tr><td class="code">^</td><td class="des">pattern must be at the start of the text string</td></tr>
+<tr><td class="code">$</td><td class="des">pattern must be at the end of the text string</td></tr>
+<tr><td class="code">\b</td><td class="des">match a position that is a word boundary (the point between a word character and
+a non-word character</td></tr>
+<tr><td class="code">\B</td><td class="des">match a position that is not a word boundary</td></tr>
+
+<tr><th colspan="2">Character Classes</th></tr>
+<tr><td class="code">\d</td><td class="des">match any digit 0-9</td></tr>
+<tr><td class="code">\D</td><td class="des">match any character that is not a digit</td></tr>
+<tr><td class="code">\w</td><td class="des">match any word character (0-9, A-Z, a-z, or _ )</td></tr>
+<tr><td class="code">\W</td><td class="des">match any non-word character</td></tr>
+<tr><td class="code">\s</td><td class="des">match any whitespace character (space, tab, newline, carriage return, form feed)</td></tr>
+<tr><td class="code">\S</td><td class="des">match any non-whitespace character</td></tr>
+<tr><td class="code">.</td><td class="des">match any character</td></tr>
+</td></tr>
+
+<tr><th colspan="2">Character Classes</th></tr>
+<tr><td class="code">[<i>chars</i>]</td><td class="des">match any characters (<i>chars</i>) within the brackets</td></tr>
+<tr><td class="code">[^<i>chars</i>]</td><td class="des">match any character except those within the brackets (<i>chars</i>)
+<tr><td class="code">[<i>char1</i>-<i>charN</i>]</td><td class="des">match characters in the range <i>char1</i> through <i>charN</i></td></tr>
+<tr><td class="code" nowrap="nowrap">[^<i>char1</i>-<i>charN</i>]</td><td class="des">do not match characters in the range <i>char1</i> through <i>charN</i></td></tr>
+
+<tr><th colspan="2">Repetition Characters</th></tr>
+<tr><td class="code">*</td><td class="des">repeat zero or more times</td></tr>
+<tr><td class="code">?</td><td class="des">repeat zero or one time</td></tr>
+<tr><td class="code">+</td><td class="des">repeat one or more times</td></tr>
+<tr><td class="code">{<i>n</i>}</td><td class="des">repeat exactly <i>n</i> times</td></tr>
+<tr><td class="code">{<i>n</i>, }</td><td class="des">repeat at least <i>n</i> times</td></tr>
+<tr><td class="code">{<i>n</i>,<i>m</i>}</td><td class="des">repeat at least <i>n</i> times, but no more than <i>m</i> times</td></tr>
+
+<tr><th colspan="2">Escape Sequences</th></tr>
+<tr><td class="code">\/</td><td class="des">match a /</td></tr>
+<tr><td class="code">\\</td><td class="des">match a \</td></tr>
+<tr><td class="code">\.</td><td class="des">match a .</td></tr>
+<tr><td class="code">\*</td><td class="des">match a *</td></tr>
+<tr><td class="code">\+</td><td class="des">match a +</td></tr>
+<tr><td class="code">\?</td><td class="des">match a ?</td></tr>
+<tr><td class="code">\|</td><td class="des">match a |</td></tr>
+<tr><td class="code">\(</td><td class="des">match a (</td></tr>
+<tr><td class="code">\)</td><td class="des">match a )</td></tr>
+<tr><td class="code">\{</td><td class="des">match a {</td></tr>
+<tr><td class="code">\}</td><td class="des">match a }</td></tr>
+<tr><td class="code">\^</td><td class="des">match a ^</td></tr>
+<tr><td class="code">\$</td><td class="des">match a $</td></tr>
+<tr><td class="code">\n</td><td class="des">match a new line</td></tr>
+<tr><td class="code">\r</td><td class="des">match a carriage return</td></tr>
+<tr><td class="code">\t</td><td class="des">match a tab</td></tr>
+
+<tr><th colspan="2">Alternative and Grouping Characters</th></tr>
+<tr><td class="code"><i>chars1</i>|<i>chars2</i></td><td class="des">match either the <i>chars1</i> or <i>chars2</i> character patterns</td></tr>
+<tr><td class="code">(<i>chars</i>)</td><td class="des">group the character pattern <i>char</i> and treat it as a single unit. Matched groups are captured and available for later procession as back-reference</td></tr>
+<tr><td class="code">\<i>n</i></td><td class="des">the back-reference to group <i>n</i></td></tr>
+<tr><td class="code">(<i>?chars</i>)</td><td class="des">group the character pattern <i>char</i> and treat it as a single unit. Matched groups are not back-referenced</td></tr>
+</table>
+</body>
+</html>    

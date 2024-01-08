@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+   JavaScript 7th Edition
+   Chapter 7
+
+
+   Filename: demo_regexp.html
+-->
+<title>Regular Expression Demo</title>
+<style type="text/css">
+
+/* use for all demo pages */
+   html       {height: 100%}
+   body       {background-color: white; background-image: url(demo2.gif); margin: 0px; 
+               width: 100%; height: 100%; margin-top: 20px;}
+   #demo_page {background-color: white; 
+               border-right: 5px solid rgb(0,0,128);
+               width: 900px; padding-bottom: 15px; height: 100%;
+               min-height: 100%; 
+			   position: relative;
+			   margin: 0px auto;
+			   height: 100%;}
+			   
+   * html #demo_page {height: 100%}
+
+   #demo_intro {width: 100%; position: relative; margin: 0px 10px}
+   #demo_intro table {margin: 0px; padding: 0px; border: 0px; width: 97%}
+   #demo_intro table td {vertical-align: bottom; padding-bottom: 5px}
+   #h2heading {color:yellow; background-image: url(demo.gif); letter-spacing: 0.5em; 
+               font-family: Arial, Helvetica, sans-serif; width: 97%; 
+               font-size: 1.5em; margin: 0px; text-align: right; 
+               border: 1px solid black}
+
+   #para      {font-size: 1em; border: 1px solid black; width: 97%;
+               background-color: ivory}
+   #para p    {margin: 8px}
+
+   #demo_container {position: relative; top: 10px; left: 0px; width: 100%;
+                    margin: 0px 10px}
+   #demo_footer {text-align: center; font-size: 8pt; border-top: 1px solid black; 
+                 margin: 25px 10px; width: 97%; clear: left; position: relative;
+                 top: 10px; left: 0px}
+   span.btitle {font-style: italic}
+
+/* styles specific to this demo */
+
+   table {margin-top: 10px; font-size: 10pt; margin-bottom: 10px}
+   td {vertical-align: top}
+   .tdlab {width: 270px}
+
+   #pbutton {width: 275px; float: left}
+   #pretest {width: 410px; float: left; font-size: 10pt; margin-bottom: 5px; text-align: right}
+   #matches {width: 410px; height: 150px; overflow:auto; font-size: 10pt; font-family: Courier New, monospace;
+             border: 1px solid rgb(127,157,185); padding: 2px; margin-top: 3px; margin-left: 275px; clear: left}
+   span.rmatch {background-color:red; color: white}
+   #sample {width: 320px; height: 150px}
+
+   #regcodes {width: 360px; height: 150px}
+   #regtxt {width: 410px; height: 50px; font-family: Courier New, monospace; font-size: 9pt}
+   #retest {margin-left: 10px}
+   .goodmatch {color:black; background-color: rgb(0,255,0)}
+   .badmatch {color: white; background-color: red}
+
+</style>
+
+<script type="text/javascript">
+
+function checkIt() {
+reform=document.rform;
+teststring = reform.sample.value;
+eval("re="+reform.regtxt.value);
+outmatch="";
+foundMatch = re.exec(teststring);
+if (foundMatch) {
+   reform.retest.value="match";
+   reform.retest.className="goodmatch";
+   if (re.global) {
+     start = new Array();
+     stop = new Array();
+     i=0;
+     while(foundMatch) {
+        start[i]=foundMatch.index;
+        stop[i]=start[i]+foundMatch[0].length-1;
+        i++;
+        foundMatch = re.exec(teststring);
+     }
+     for (i=0; i<teststring.length;i++) {
+        if (matchval(i,start)) outmatch+="<span class='rmatch'>";
+       outmatch+=teststring.charAt(i);
+        if (matchval(i,stop)) outmatch+="</span>"; 
+     }
+   } else {
+      for (i=0; i<teststring.length;i++) {
+        if (i==foundMatch.index) outmatch+="<span class='rmatch'>";
+        outmatch+=teststring.charAt(i);
+        if (i==foundMatch.index+foundMatch[0].length-1) outmatch+="</span>";
+      }
+   }
+} else {
+   reform.retest.value="no match";
+   reform.retest.className="badmatch";
+   outmatch=teststring;
+}
+   document.getElementById("matches").innerHTML=outmatch;
+}
+
+function matchval(x, xArray) {
+   for (k=0;k<xArray.length;k++) {
+      if (xArray[k]==x) return true;
+   }
+   return false;
+}
+
+function transfercode() {
+   i=document.rform.regsamp.selectedIndex;
+   document.rform.regtxt.value=document.rform.regsamp.options[i].value;
+}
+
+function resetresult() {
+   document.getElementById("matches").innerHTML="";
+   document.rform.retest.value="";
+   document.rform.retest.className="";
+}
+
+function handleError() {
+   alert("ERROR. You may have entered an improper regular expression");
+   return true;
+}
+
+window.onerror=handleError;
+
+</script>
+
+</head>
+
+<body>
+<form id="rform" name="rform">
+<div id="demo_page">
+
+<div id="demo_intro">
+   <table>
+   <tr><td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+       <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em">
+          JavaScript 7th Edition<br />Chapter 7
+   </td></tr>
+   </table>
+
+   <h2 id="h2heading">Regular Expressions </h2>
+   <div id="para">
+   <p>Regular Expressions are text strings that define a pattern of characters and symbols.
+In this demo you can use regular expressions to perform pattern matching on a text string you specify.
+Enter the text string in the first text input box, then select a predefined regular expression or 
+create one of your own. Click the <b>Pattern Test</b> button. If a matching pattern is found,
+the Pattern Test Result box will display <span class="goodmatch">match</span> and the matching 
+substring in the text string will be highlighted.
+   </p>
+   </div>
+</div>
+
+<div id="demo_container">
+<table><tr>
+<td>
+Enter a text string<br />
+<textarea id="sample" name="sample"></textarea>
+</td><td>
+Regular expression codes<br />
+<iframe src="demo_regcodes.html" id="regcodes" tabindex="-1"></iframe>
+</td></table>
+
+<table><tr>
+<td class="tdlab">Select a predefined regular expression</td>
+<td><select id="regsamp" name="regsamp" onchange="transfercode()">
+      <option value="">Predefined Regular Expressions</option>
+      <option value="/^\d{5}$/">5-digit zip code</option>
+      <option value="/^\d{5}-\d{4}$/">9-digit zip code</option>
+      <option value="/^\d{5}(-\d{4})?$/">zip code (either style)</option>
+      <option value="/^\d{3}[\s.\-]?\d{4}$/">phone number (no area code)</option>
+      <option value="/^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$/">phone number + area code</option>
+      <option value="/^(0?[1-9]|1[0-2])\/(0?[1-9]|[1-2][0-9]|3[01])\/(19|20)\d{2}$/">date (mm/dd/yyyy)</option>
+      <option value="/^(0?[1-9]|1[0-2])\/(0?[1-9]|[1-2][0-9]|3[01])\/\d{2}$/">date (mm/dd/yy)</option>
+      <option value="/^(19|20)\d{2}-(0?[1-9]|1[0-2])-(0?[1-9]|[1-2][0-9]|3[01])$/">date (yyyy-mm-dd)</option>
+      <option value="/^(19|20)\d{2}-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(0?[1-9]|[1-2][0-9]|3[01])$/">date (yyyy-Mon-dd)</option>
+      <option value="/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s([1-9]|[1-2][0-9]|3[01]),\s?(19|20)\d{2}$/">date (Mon dd, yyyy)</option>
+      <option value="/^([1-9]|1[0-2]):[0-5][0-9]\s?(a|p)\.?m\.?$/">12-hour time (hh:mm am/pm)</option>
+      <option value="/^([1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]\s?(a|p)\.?m\.?$/">12-hour time (hh:mm:ss am/pm)</option>
+      <option value="/^([1-9]|1[0-9]|2[0-3]):[0-5][0-9]$/">24-hour time (hh:mm)</option>
+      <option value="/^([1-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/">24-hour time (hh:mm:ss)</option>
+      <option value="/^\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,8}$/">e-mail address</option>
+      <option value="/^(ftp|file|https?):\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?$/">URL</option>
+      <option value="/^\$?\d+\.\d{2}$/">Currency value (d.dd or $d.dd)</option>
+      <option value="/^(1[0-1]\d|\d{1,2})$/">Age (from 0 to 119)</option>
+      <option value="/^4\d{14,15}$/">Visa card</option>
+      <option value="/^5[1-5]\d{14}$/">MasterCard</option>
+      <option value="/^3[47]\d{13}$/">American Express card</option>
+      <option value="/^(30[0-5]|360|380)\d{11}$/">Diners Club card</option>
+      <option value="/^6011\d{12}$/">Discover card</option>
+   </select>
+</td></tr><tr>
+<td class="tdlab">Or enter one directly</td>
+<td><textarea id="regtxt" name="regtxt" onchange="resetresult()" /></textarea></td>
+</tr></table>
+<div id="pbutton">
+   <input type="button" id="checkb" name="checkb" value="Pattern Test" onclick="checkIt()" />
+</div>
+<div id="pretest">
+   Pattern Test Result <input id="retest" name="retest" size="8" />
+</div>
+<div id="matches">
+</div>
+</div>
+
+<div id="demo_footer">
+  Carey, P.
+  <span class="btitle">JavaScript 7th Edition</span>,
+  Cengage Learning: Boston, 2021.
+</div>
+
+</div>
+</form>
+</body>
+</html>
+
+
