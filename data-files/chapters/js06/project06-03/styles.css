@@ -1,0 +1,191 @@
+/*  JavaScript 7th Edition
+    Chapter 6
+    Hands-on Project 6-3
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   width: 960px;
+   background: white;
+   margin: 0 auto;
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #5472B2;
+   width: 100%;
+   color: #FFFFFF;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+}
+
+/* main content */
+article {
+   width: 960px;
+   text-align: left;
+   background: #FFDB70;
+   position: relative;
+}
+
+
+
+/*-------------------- Project Styles ------------------*/
+
+article {
+   padding: 20px 50px 60px;
+}
+article h1 {
+   font-size: 1.7em;
+   margin-bottom: 20px;
+}
+
+form#billShip {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+form#billShip section {
+   flex: 1;
+   margin: 10px;
+}
+
+input#useShip {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+
+label#cbLabel {
+   position: absolute;
+   top: 10px;
+   left: 35px;
+   width: 250px;
+   float: none;
+   clear: none;
+   display: block;
+   text-align: left;
+}
+fieldset {
+   border: 2px ridge rgb(128, 128, 128);
+   padding: 50px 5px 0px;
+   position: relative;
+   margin-top: 5px;
+}
+
+fieldset span {
+   color: red;
+   font-weight: bold;
+}
+
+fieldset label {
+   display: block;
+   float: left;
+   clear: left;
+   width: 150px;
+   text-align: right;
+   margin: 0 15px 25px 0;
+}
+
+fieldset p {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   
+}
+
+fieldset input[type="text"] {
+   float: left;
+   width: 200px;
+   margin: 0 0 25px 0;
+}
+
+input[type="submit"] {
+   display: block;
+   width: 120px;
+   height: 30px;
+   font-size: 1em;
+   margin: 20px auto;
+   float: none;
+   clear: none;
+}
+
+p#errorBox {
+   width: 100%;
+   color: red;
+   font-size: 1.1em;
+   margin-left: 10px;
+   margin-top: 10px;
+   border: 1px solid red;
+   background-color: white;
+   padding: 15px;
+   
+   
+}
+input[type="text"]:invalid {
+   background-color: rgba(255, 0, 0, 0.3);
+}
+
+section > h1 {
+   font-size: 1.4em;
+   margin: 20px 0 20px 30px;
+}
+
+table {
+   margin-left: 30px;
+   border-collapse: collapse;
+   width 48%;
+   float: left;
+   margin-right: 1%;
+}
+
+table td {
+   border: 1px solid rgb(150,150,150);
+   padding: 5px;
+}
+
+table tr td:first-of-type {
+   background-color: #E3E09B;
+}

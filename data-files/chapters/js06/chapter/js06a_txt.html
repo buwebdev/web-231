@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Chapter Case
+
+      Author: 
+      Date:   
+
+      Filename: js06a.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Chapter 6 Case Problem: Product Order</title>
+   <link rel="stylesheet" href="stylesa.css" />
+</head>
+
+<body>
+   <header>
+      <img src="logo.png" alt="Coctura" />
+   </header>
+   <section id="summary">
+      <h1>DigiPot<sup>&reg;</sup> Multi-Functional Pressure Cooker</h1>
+      <h2>by <a href="#">Smart Chef</a></h2>
+      <h3>Customer Rating (1,028 votes): <img src="stars.png" alt="4.5 stars" /></h3>
+      <p>DigiPot is a smart and safe electric pressure cooker, speeding up
+         cooking times while still using up to 70% less energy. The
+         DigiPot multi-use cooker is programmable and can act as a pressure
+         cooker, slow cooker, rice cooker, and steamer. Cook your favorite
+         dishes with the press of a button. A 24-hour timer allows for delayed cooking.
+         Comes in 4-, 6-, and 8-quart models.
+      </p>
+   </section>
+   
+   <section id="orderSection">
+      <form id="orderForm" name="orderForm" method="get" action="ordersubmit.html">
+        
+        <table id="orderTable">
+           <caption>Product Order</caption>
+           <tr>
+              <td>
+                 <label for="model">Model</label>
+                 <select name="model" id="model">
+                    <option value="89.95">4-Quart ($89.95)</option>
+                    <option value="129.95" selected>6-Quart ($129.95)</option>
+                    <option value="159.95">8-Quart ($159.95)</option>
+                 </select>   
+                 <input type="hidden" id="modelName" name="modelName" />
+              </td>
+              <td class="rightA">
+                 <label for="qty">Qty</label>
+                 <select name="qty" id="qty">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                    <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                    <option value="10">10</option>
+                 </select>   
+              </td>                 
+              <td>
+                 <input type="text" name="modelCost" id="modelCost" size="10" readonly />
+              </td>
+           </tr>
+           <tr>
+              <td colspan="2"> 
+                 <fieldset>
+                    <legend>Protection Plan</legend>
+                    <input type="radio" id="plan_0" name="plan" value="0" checked /> <label for="plan_0">No protection plan ($0.00)</label><br>
+                    <input type="radio" id="plan_1" name="plan" value="11.95" /> <label for="plan_1">1-year protection plan ($11.95)</label><br>
+                    <input type="radio" id="plan_2" name="plan" value="15.95" /> <label for="plan_2">2-year protection plan ($15.95)</label><br>
+                    <input type="radio" id="plan_3" name="plan" value="19.95"  /> <label for="plan_3">3-year protection plan ($19.95)</label>
+                 </fieldset>
+                 <input type="hidden" id="planName" name="planName" />
+              </td>
+              <td>
+                 <input type="text" name="planCost" id="planCost" size="10" readonly />
+              </td>
+           </tr>        
+           <tr>
+              <td colspan="2" class="rightA">Subtotal</td>
+              <td class="outcell">
+                 <input type="text" name="subtotal" id="subtotal" size="10" readonly />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">Tax (5%)</td>
+              <td>
+                 <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+              </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" class="rightA">TOTAL</td>
+              <td>
+                 <input type="text" name="totalCost" id="totalCost" size="10" readonly />
+              </td>
+           </tr>
+        </table>
+        <input type="submit" id="buttonAdd" value="add to cart" />
+
+      </form>
+   </section>
+</body>
+</html>

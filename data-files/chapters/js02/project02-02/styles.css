@@ -1,0 +1,133 @@
+/*  JavaScript 7th Edition
+    Chapter 2
+    Hands-on Project 2-2
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   max-width: 960px;
+   background: white;
+   margin: 40px auto;
+   font-family: Arial, Helvetica, sans-serif; 
+   border: 4px outset gray;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #FFE373;
+   width: 100%;
+   color: black;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+}
+
+/* main content */
+article {
+   width: 100%;
+   text-align: center;
+   background: #BFA230;
+   padding-bottom: 20px;
+}
+
+article h2 {
+   font-weight: bold;
+   font-size: 24px;
+   padding: 10px;
+}
+
+/* form */
+
+#submitbutton input {
+  font-family: georgia, "times new roman", times, serif;
+  }
+fieldset {
+  position: relative;
+  padding: 1em;
+  background: white;
+  text-align: left;
+  }
+form {
+  background: white;
+  padding: 10px 5px 7px 5px;
+  margin: 0 auto;
+  width: 750px;
+  border: 2px solid black;
+  }
+input {
+  font-size: 1em;
+  }
+input:focus {
+  background: #e3d5ba;
+  }
+label {
+  display: block;
+  position: relative;
+  margin: 12px 0;
+  }
+#contactinfo input {
+  position: absolute;
+  left: 100px;
+  }
+#nameinput, #emailinput {
+  width: 30em;
+  }
+#phoneinput {
+  width: 12em;
+  }
+#submit {
+  background: #e3d5ba;
+  font-size: 1.25em;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+#submitbutton {
+  padding: 0.5em 0;
+  margin-bottom: 0;
+  text-align: center;
+  }

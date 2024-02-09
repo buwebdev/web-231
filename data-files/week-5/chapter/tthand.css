@@ -1,0 +1,237 @@
+/*  JavaScript 7th Edition
+    Chapter 3
+    Chapter case
+
+    Tipton Turbines
+    Mobile style sheet
+
+    Filename: tthand.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   background: -webkit-linear-gradient(rgb(235,93,52), white) no-repeat;
+   background: -moz-linear-gradient(rgb(235,93,52), white) no-repeat;
+   background: linear-gradient(rgb(235,93,52), white) no-repeat;
+   margin: 0 auto;
+   font-family: "Maven Pro", arial, helvetica, sans-serif;
+   font-weight: 400;
+   position: relative;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* page header */
+header {
+   font-size: 48px;
+   background-color: #EFE0B9;
+}
+
+header img {
+   display: block;
+   margin: 0 auto;
+}
+
+/* navigation */
+nav {
+   font-size: 16px;
+   font-weight: 900;
+   width: 100%;
+   color: white;
+   background: black;
+}
+
+nav ul {
+   text-align: center;
+}
+
+nav ul li {
+   display: inline-block;
+   padding: 8px 15px;
+   margin: 0 3px;
+   z-index: 2;
+}
+
+nav ul li:hover {
+   background: white;
+   color: rgb(235,93,52);
+}
+
+/* main content */
+article {
+   background: white;
+   border-top: 1px solid black;
+}
+
+article h2 {
+   font-size: 1.2em;
+   font-weight: 700;
+   text-align: center;
+   padding: 10px 5px 0;
+   background-color: #EFE0B9;
+}
+
+article p {
+   margin-bottom: 6px;
+   line-height: 1.2em;
+}
+
+article table {
+   width: 100%;
+   text-align: center;
+}
+
+article table caption {
+   padding: 5px;
+   background-color: #EFE0B9;
+}
+
+article tr td:first-child, article tr td:last-child {
+   background: #DDDDDD;
+}
+
+article td {
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   border-collapse: collapse;
+   padding: 5px;
+}
+
+article td {
+   float: left;
+   clear: left;
+   width: 100%;
+}
+
+article th {
+   display: none;
+}
+
+
+article td {
+	background-color: ivory;
+}
+
+article td h1 {
+	font-weight: bold;
+	font-size: 0.9em;
+	text-align: right;
+	margin: 0;
+	padding: 2px 2px 2px 0;
+	background-color: rgba(43,37,37,1.00);
+	color: white;
+}
+
+article td p {
+	font-size: 0.9em;
+	text-align: left;
+	margin: 0px;
+	padding: 7px 3px 30px 10px;	
+	
+}
+
+article td p.win, article tfoot td:nth-of-type(1) {
+	background-color: #B7F0AE;
+}
+
+
+article td p.lose, article tfoot td:nth-of-type(2) {
+	background-color: #F87274;
+}
+
+article td p.suspended, article tfoot td:nth-of-type(3) {
+	background-color: #EBF53E;
+}
+
+article td p.postponed, article tfoot td:nth-of-type(4) {
+	background-color: #4D4949;
+	color: white;
+}
+
+tbody td {
+	border: 1px solid black;
+}
+tfoot tr td {
+	border: 10px solid white;
+	padding: 10px 0;
+}
+
+/* footer */
+footer {
+   width: 100%;
+   font-size: 14px;
+   padding: 10px;
+   background: rgb(235,93,52);
+   color: white;
+}
+
+footer p {
+   text-align: center;
+}

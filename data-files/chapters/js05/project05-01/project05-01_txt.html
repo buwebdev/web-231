@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 5
+      Hands-on Project 5-1
+
+      Author: 
+      Date:   
+
+      Filename: project05-01.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 5-1</title>
+   <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 5-1
+      </h1>
+   </header>
+
+   <article>
+      <h2>Algebra I Practice Quiz</h2>
+      
+      <div id="container">
+         <div id="instructions">
+            <p>Click the <strong>Start Quiz</strong> button below
+               to start the quiz and begin the countdown. Upon completion, incorrect answers
+               will be marked in red. Retake the quiz as many times as you wish.
+            </p>
+            <input id="startquiz" value="Start Quiz" />
+            <input id="quizclock"  />
+         </div>
+
+         <div id="quiz">
+            <table>
+               <tr>
+                  <td>1)&nbsp;&nbsp;&nbsp; 5 + 2<em>x</em> = 25</td>
+                  <td><em>x</em> = <input id="question1" /></td>
+               </tr>
+               <tr>
+                  <td>2)&nbsp;&nbsp;&nbsp; 30 &ndash; 5<em>x</em> = 10</td>
+                  <td><em>x</em> = <input id="question2" /></td>
+               </tr>   
+               <tr>
+                  <td>3)&nbsp;&nbsp;&nbsp; 6 + 3<em>x</em> = &ndash;12</td>
+                  <td><em>x</em> = <input id="question3" /></td>
+               </tr>   
+               <tr>
+                  <td>4)&nbsp;&nbsp;&nbsp; 44 &ndash; 12<em>x</em> = &ndash;16</td>
+                  <td><em>x</em> = <input id="question4" /></td>
+               </tr>  
+               <tr>
+                  <td>5)&nbsp;&nbsp;&nbsp; 48 + 6<em>x</em> = 6</td>
+                  <td><em>x</em> = <input id="question5" /></td>
+               </tr>                 
+            </table>
+         </div>
+
+         <div id="overlay" class="hidequiz"></div>
+      </div>
+   </article>
+</body>
+</html>
